@@ -7,7 +7,7 @@
       "@schemas/*": ["./schemas/*"],
       "@lib/*": ["./lib/*"],
       "@styles/*": ["./styles/*"],
-      // "@utils/*": ["./utils/*"],
+      
     }
   }
 }

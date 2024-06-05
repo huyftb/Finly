@@ -1,7 +1,7 @@
 "use server"
 import {db } from "@lib/db"
 import { RegisterSchema } from "./index"
-import bcrypt from "bcrypt"
+import bcrypt from "bcryptjs"
 
 
 export const register = async (values) => {
@@ -26,12 +26,12 @@ export const register = async (values) => {
 
         const existingUserByName = await db.user.findUnique({
             where: {
-                userName: name,
+                name: name,
             }
         });
         if (existingUserByName) {
             return {
-                error: "Username already exist"
+                error: "name already exist"
             }
         }
 
@@ -39,7 +39,7 @@ export const register = async (values) => {
             data: {
                 email: email,
                 password: hashpass,
-                userName: name,
+                name: name,
             }
         })
         //send opt email
