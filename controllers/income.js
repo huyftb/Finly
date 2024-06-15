@@ -1,4 +1,4 @@
-const IncomeSchema= require("../models/incomeModel")
+const IncomeSchema= require("../")
 
 
 exports.addIncome = async (req, res) => {
