@@ -15,7 +15,7 @@ export const register = async (values) => {
         console.log(validateFields.data);
         const existingUserByEmail = await db.user.findUnique({
             where: {
-                email,
+                email: email,
             }
         });
         if (existingUserByEmail) {

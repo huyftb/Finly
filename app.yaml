@@ -1,0 +1,10 @@
+# config for google app engine
+# [START app_yaml]
+runtime: nodejs20
+env: standard
+instance_class: F1
+handlers:
+  - url: .*
+    script: auto
+    secure: always
+    script: auto

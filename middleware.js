@@ -16,7 +16,7 @@ const middleware = (req) => {
   const isPublic = publicRoute.includes(nextUrl.pathname);
   const isAuth = authRoute.includes(nextUrl.pathname);
 
-  console.log("Login?", isLoggin);
+  console.log("Login?", req.auth);
 
   if(isApi){
     return null;

@@ -15,4 +15,5 @@ export const DEFUALT_LOGIN_AFTER = "/settings"
 export const authRoute = [
     "/login",
     "/register",
+    ""
 ]
