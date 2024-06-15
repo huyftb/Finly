@@ -18,8 +18,8 @@ import { FormError } from '@/components/ui/form-error'
 import { FormSuccess } from '@/components/ui/form-success'
 import { login } from "@schemas/login"
 import { useSearchParams } from 'next/navigation'
-
 export const LoginForm = () => {
+
     const searchParams = useSearchParams();
     const urlError = searchParams.get("error") === "OAuthAccountNotLinked"
       ? "This email is already registered with another account. Please login with the correct way."
@@ -32,7 +32,7 @@ export const LoginForm = () => {
         login(values)
          .then((data)=>{
             setError(data.error)
-            // setSuccess(data.success)
+            setSuccess(data.success)
          })
       });
 
@@ -94,5 +94,6 @@ export const LoginForm = () => {
         </form>
       </Form>
     </CardWrapper>
+    
   )
 }
